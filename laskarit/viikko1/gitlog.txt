@@ -1,0 +1,113 @@
+commit 07599784606d1b27eba7614cb2db1fa99973d4cd
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:51:56 2022 +0200
+
+    Poista file 1, uudelleennimeä file2
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 5bbd2bcbf898201bde05adb89f721cb79106bd53
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:50:44 2022 +0200
+
+    Lisää tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 890ff9efc8b62aff6b71bd29d36151697fc57b34
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:48:55 2022 +0200
+
+    Muuta tiedostoja
+
+ eka.txt    | 2 +-
+ kolmas.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+commit a39ebd0b3f7928b7adc33632434d1617fe88e806
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:47:17 2022 +0200
+
+    Uudelleennimeä tiedosto ekaksi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 09f70541a52be57de1a5d412f0f5d631a5a16dc0
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:45:41 2022 +0200
+
+    Poista toinen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 4aafc76f7845dba4051278eddf0cf5f273146463
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:45:03 2022 +0200
+
+    Muokkaa tiedostoa
+
+ tiedosto.txt | 16 +++++++++-------
+ 1 file changed, 9 insertions(+), 7 deletions(-)
+
+commit 3955d7a061d7d428b2f30b8b3fadff08afa17c05
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:44:03 2022 +0200
+
+    Lisää lorem tiedostoon
+
+ tiedosto.txt | 46 +++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 45 insertions(+), 1 deletion(-)
+
+commit 122bd59e241a8f9a6df21e1902f778ef4ee01434
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:40:28 2022 +0200
+
+    lisää jokin
+
+ stuff/jokin.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 26f9ace53d8716e34d136728f9e07ddec310ed82
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:39:42 2022 +0200
+
+    muuta toista ja kolmatta
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 3b0735fe8ed08e3295c67d459486d274f28a45c2
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:38:30 2022 +0200
+
+    lisää kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 6d9f027503dd9cd9fd143954dc587b8eaa57b67b
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:37:22 2022 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit cc6f5b1a3263c170ba26c14367dfd6b38c9c9f5a
+Author: Nuutti Nikkola <nuuttinikkola1@gmail.com>
+Date:   Wed Nov 2 22:36:09 2022 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

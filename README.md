@@ -5,4 +5,8 @@
 
 [komentorivi.txt](https://github.com/nualn/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
 
-:-(
+## Dokumentaatio
+[Vaatimusmäärittely](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+
+[Tuntikirjanpito](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+

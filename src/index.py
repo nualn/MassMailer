@@ -1,12 +1,11 @@
 from parser import parser
 
 def main():
-    dummy_string = "Lorem [i] dolor sit amet, consectetuer [a] elit."
-    dummy_dict = {
-        "i": "ipsum", 
-        "a": "consectetuer adipiscing elit."
+    user_string = input("Give a string with [1] somewhere:\n")
+    user_dict = {
+        "1": input("Type something to replace the previous [1]:\n")
     }
-    print(parser.parse(dummy_string, dummy_dict))
+    print(parser.parse(user_string, user_dict))
 
 if __name__ == "__main__":
     main()

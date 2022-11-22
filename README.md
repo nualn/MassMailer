@@ -9,7 +9,7 @@ Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköpost
 [Changelog](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
 ## Sovelluksen tila
-Tällä hetkellä sovelluksella on vain yksinkertainnen teksti käyttöliittymä, jolla pystyy sijoittamaan merkkijonoon vain yhden muuttujan.
+Tällä hetkellä sovelluksella on vain yksinkertainnen tekstikäyttöliittymä parsimisominaisuudelle. Sillä pystyy sijoittamaan merkkijonoon vain yhden muuttujan.
 
 ## Ohjelman asennus ja käynnistys
 1. Asenna riippuvuudet:

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "massmailer"
+version = "0.1.0"
+description = ""
+authors = ["Nuutti Nikkola <nuuttinikkola1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+yagmail = "^0.15.293"
+google-api-python-client = "^2.65.0"
+google-auth-httplib2 = "^0.1.0"
+google-auth-oauthlib = "^0.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+coverage = "^6.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

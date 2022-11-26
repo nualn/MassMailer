@@ -1,3 +1,5 @@
+dummy_titles = ['1', '2', '3']
+dummy_rows = [['foo', 'bar', 'baz'], ['boo', 'far', 'faz']]
 
 class State:
     def __init__(self):
@@ -5,6 +7,8 @@ class State:
         self._rows = []
         self._selected = []
         self._message = ""
+        self.set_headings(dummy_titles)
+        self.set_rows(dummy_rows)
     
     # heading methods
     def set_headings(self, new_headings):

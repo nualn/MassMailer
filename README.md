@@ -9,7 +9,8 @@ Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköpost
 [Changelog](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
 ## Sovelluksen tila
-Tällä hetkellä sovelluksella on vain yksinkertainnen tekstikäyttöliittymä parsimisominaisuudelle. Sillä pystyy sijoittamaan merkkijonoon vain yhden muuttujan.
+
+Ensimmäinen versio sovelluiksen graafisesta käyttöliittymästä on käytössä. Käyttäjä pystyy määrittämään 3 muuttujaa, jotka voi sijoittaa viestikentään määriteltyyn viestiin valitsemalla halutun rivin taulukosta ja painamalla Preview-nappia. Sijoitus kohdat määritellään lisäämällä tekstiin sarakkeen nimi hakasulkujen sisällä, esim [1]. Sovellus lataa käynnistyessään 2 esimerkkiriviä.
 
 ## Ohjelman asennus ja käynnistys
 1. Asenna riippuvuudet:
@@ -30,4 +31,13 @@ poetry run invoke test
 2. Generoi testikattavuusraportti
 ```bash
 poetry run invoke coverage-report
+```
+## Muut komennot
+1. Aja lintteri
+```bash
+poetry run invoke lint
+```
+2. Autoformatoi koodi
+```bash
+poetry run invoke format
 ```

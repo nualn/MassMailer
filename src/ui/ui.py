@@ -11,12 +11,14 @@ class UI:
         self._label_var = None
         self._state = state
 
+    def start(self):
         message_field = Message_field(self._root, self._state)
-        tbl_frame = ttk.Frame(self._root)
-        tbl_frame.pack(pady=20)
-        tbl = Tbl(tbl_frame, self._state)
-        tbl.start()
+        message_field.pack()
+        
+        tbl = Tbl(self._root, self._state)
+        tbl.pack()
 
         preview = Preview(self._root, self._state, parser)
+        preview.pack()
         
 

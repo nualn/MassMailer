@@ -4,10 +4,10 @@ class Message_field:
     def __init__(self, root, state):
         self._root = root
         self._state = state
+        self._frame = ttk.Frame(self._root)
 
-        message_frame = ttk.Frame(self._root)
-        message_frame.pack()
-        self.message_entry = scrolledtext.ScrolledText(message_frame, 
+        self.message_entry = scrolledtext.ScrolledText(
+            self._frame, 
             wrap = WORD, 
             width = 40, 
             height = 10, 
@@ -22,3 +22,6 @@ class Message_field:
 
     def update_message(self, _):
         self._state.set_message(self.message_entry.get("1.0","end-1c"))
+
+    def pack(self):
+        self._frame.pack()

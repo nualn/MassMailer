@@ -10,6 +10,7 @@ def main():
     state = State()
 
     ui = UI(window, state)
+    ui.start()
 
     window.mainloop()
 

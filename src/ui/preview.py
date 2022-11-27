@@ -5,10 +5,10 @@ class Preview:
         self._root = root
         self._state = state
         self._parser = parser
+        self._frame = ttk.Frame(self._root)
 
-        preview_frame = ttk.Frame(self._root)
-        preview_frame.pack(pady=20)
-        self.preview_text = scrolledtext.ScrolledText(preview_frame, 
+        self.preview_text = scrolledtext.ScrolledText(
+            self._frame, 
             state='disabled',
             wrap = WORD, 
             width = 40, 
@@ -18,7 +18,7 @@ class Preview:
         )
         self.preview_text.pack()
 
-        preview_button = ttk.Button(preview_frame,text="Preview",command=self.get_preview)
+        preview_button = ttk.Button(self._frame,text="Preview",command=self.get_preview)
         preview_button.pack()
 
     def get_preview(self):
@@ -30,3 +30,6 @@ class Preview:
             self._state.get_selected()
         ))
         self.preview_text.configure(state="disabled")
+
+    def pack(self):
+        self._frame.pack()

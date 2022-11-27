@@ -1,16 +1,16 @@
-from tkinter import ttk
-from tkinter import *
+from tkinter import ttk, NO, CENTER, END
 
 class Tbl:
     def __init__(self, root, state):
         self._root = root
         self._state = state
         self._entry_fields = []
-    
-    def start(self):
-        self.tbl = ttk.Treeview(self._root)
+        self._frame = ttk.Frame(self._root)
+
+        self.tbl = ttk.Treeview(self._frame)
         self.tbl.pack()
         self.tbl.bind('<ButtonRelease-1>', self.select_row)
+        self.tbl.bind('<KeyRelease>', self.select_row)
 
         # define columns
         self.tbl['columns'] = self._state.get_headings()
@@ -25,26 +25,25 @@ class Tbl:
             self.tbl.insert(parent='',index='end', values=row)
 
 
-        frame = Frame(self._root)
+        frame = ttk.Frame(self._frame)
         frame.pack(pady=20)
 
         for i, field in enumerate(self._state.get_headings()):
-            label = Label(frame,text=field)
-            entry = Entry(frame)
+            label = ttk.Label(frame,text=field)
+            entry = ttk.Entry(frame)
             label.grid(row=0,column=i)
             entry.grid(row= 1, column=i)
             self._entry_fields.append(entry)
 
-        new_button = Button(frame,text="New ",command=self.insert_row)
+        new_button = ttk.Button(frame,text="New ",command=self.insert_row)
         new_button.grid(row=2, column=0)
 
-        edit_button = Button(frame,text="Update ",command=self.update_row)
+        edit_button = ttk.Button(frame,text="Update ",command=self.update_row)
         edit_button.grid(row=2, column=1)
 
-        clear_button = Button(frame, text="Clear ", command=self.clear_fields)
+        clear_button = ttk.Button(frame, text="Clear ", command=self.clear_fields)
         clear_button.grid(row=2, column=2)
 
-    #Select Record
     def select_row(self, _):
         self.clear_fields()
         selected=self.tbl.focus()
@@ -53,7 +52,6 @@ class Tbl:
         for i, entry in enumerate(self._entry_fields):
             entry.insert(0,values[i])
 
-    #save Record
     def update_row(self):
         selected=self.tbl.focus()
         #save new data 
@@ -65,6 +63,8 @@ class Tbl:
         self.clear_fields()
 
     def clear_fields(self):
-        #clear entry boxes
         for entry in self._entry_fields:
             entry.delete(0,END)
+
+    def pack(self):
+        self._frame.pack()

@@ -8,6 +8,8 @@ Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköpost
 
 [Changelog](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
 
+[Arkkitehtuuri](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+
 ## Sovelluksen tila
 
 Ensimmäinen versio sovelluiksen graafisesta käyttöliittymästä on käytössä. Käyttäjä pystyy määrittämään 3 muuttujaa, jotka voi sijoittaa viestikentään määriteltyyn viestiin valitsemalla halutun rivin taulukosta ja painamalla Preview-nappia. Sijoitus kohdat määritellään lisäämällä tekstiin sarakkeen nimi hakasulkujen sisällä, esim [1]. Sovellus lataa käynnistyessään 2 esimerkkiriviä.

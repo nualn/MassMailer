@@ -6,7 +6,7 @@ from state import State
 def main():
     window = Tk()
     window.title("MassMailer")
-    window.geometry('500x500')
+    window.geometry('500x1000')
 
     state = State()
 

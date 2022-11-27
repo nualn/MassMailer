@@ -9,3 +9,4 @@
 - Lisätty GUI:n ensimmäinen versio
   - Lisätty luokka Tbl, joka pitää kirjaa käyttäjän lisäämistä muuttujariveisä
   - Lisätty luokka UI, jolla käyttäjä voi luoda viestin, luoda muuttujia ja esikatsella parsittua viestiä.
+  - Refaktoroitu UI luokiksi Message_field ja Preview

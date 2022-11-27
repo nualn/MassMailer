@@ -15,6 +15,7 @@ Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköpost
 Ensimmäinen versio sovelluiksen graafisesta käyttöliittymästä on käytössä. Käyttäjä pystyy määrittämään 3 muuttujaa, jotka voi sijoittaa viestikentään määriteltyyn viestiin valitsemalla halutun rivin taulukosta ja painamalla Preview-nappia. Sijoitus kohdat määritellään lisäämällä tekstiin sarakkeen nimi hakasulkujen sisällä, esim [1]. Sovellus lataa käynnistyessään 2 esimerkkiriviä.
 
 Alla esimerkki toiminnasta:
+
 ![](./dokumentaatio/UIv1demo.png)
 
 ## Ohjelman asennus ja käynnistys

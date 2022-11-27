@@ -9,4 +9,5 @@ class _Parser:
             result = result.replace(f"[{key}]", str(variable_values[i]))
         return result
 
+
 parser = _Parser()

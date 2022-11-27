@@ -2,6 +2,7 @@ from tkinter import Tk
 from ui.ui import UI
 from state import State
 
+
 def main():
     window = Tk()
     window.title("MassMailer")
@@ -9,10 +10,11 @@ def main():
 
     state = State()
 
-    ui = UI(window, state)
-    ui.start()
+    user_interface = UI(window, state)
+    user_interface.start()
 
     window.mainloop()
+
 
 if __name__ == "__main__":
     main()

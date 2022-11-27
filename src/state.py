@@ -40,7 +40,7 @@ class State:
         self._rows.pop(index)
         
     def update_row(self, index, new_row):
-        self._row[index] = new_row
+        self._rows[index] = new_row
 
     # selected methods
     def set_selected(self, row):

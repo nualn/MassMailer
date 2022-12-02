@@ -3,21 +3,24 @@ from tkinter import ttk, WORD, scrolledtext
 from ui.tbl import Tbl
 from ui.message_field import Message_field
 from ui.preview import Preview
-from parser import parser
+from text_parser import parser
 
 
 class UI:
-    def __init__(self, root, state):
+    def __init__(self, root):
         self._root = root
-        self._label_var = None
-        self._state = state
 
     def start(self):
-        message_field = Message_field(self._root, self._state)
+        message_field = Message_field(self._root)
         message_field.pack()
 
-        tbl = Tbl(self._root, self._state)
+        tbl = Tbl(self._root)
         tbl.pack()
 
-        preview = Preview(self._root, self._state, parser)
+        preview = Preview(
+            self._root, 
+            message_field.get_message,
+            tbl.get_selected_row, 
+            parser
+        )
         preview.pack()

@@ -8,4 +8,5 @@
 |27.11.22| 1 | GUI:n refaktorointia. |
 |27.11.22| 2 | Lintterin ja formatterin lisääminen, dokumentaation päivittäminen. |
 |2.12.22| 3 | Oauth ja gmailAPIn luokkien implementointi |
-| **yht.** | **20** | 
+|2.12.22| 2 | UI:n tunkkaaminen |
+| **yht.** | **22** | 

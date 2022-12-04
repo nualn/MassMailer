@@ -10,4 +10,5 @@
 |2.12.22| 3 | Oauth ja gmailAPIn luokkien implementointi |
 |2.12.22| 2 | UI:n tunkkaaminen |
 |4.12.22| 3 | UI:n laajentamista |
-| **yht.** | **25** | 
+|4.12.22| 3 | Sähköpostien lähettämisen implementointi |
+| **yht.** | **28** | 

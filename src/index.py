@@ -1,8 +1,9 @@
 from tkinter import Tk
+from app import App
 from mail.gmail_service import GmailService
-from mail.mailer import Mailer
 from ui.ui import UI
 from oauth.authorizer import Authorizer
+from text_parser import parser
 
 test_message = {
     'to': 'nuuttinikkola1+1@gmail.com',
@@ -17,10 +18,10 @@ def main():
     window.geometry('500x1000')
 
     auth = Authorizer()
-    # gmail = Gmail_service(auth.get_creds())
-    # mailer = Mailer(gmail)
+    gmail = GmailService()
+    app = App(auth, gmail, parser)
 
-    user_interface = UI(window, auth)
+    user_interface = UI(window, app)
     user_interface.start()
 
     window.mainloop()

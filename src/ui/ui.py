@@ -8,13 +8,13 @@ from ui.loginout import Loginout
 
 
 class UI:
-    def __init__(self, root, auth):
+    def __init__(self, root, app):
         self._root = root
-        self._auth = auth
+        self._app = app
 
     def start(self):
 
-        loginout = Loginout(self._root, self._auth)
+        loginout = Loginout(self._root, self._app)
         loginout.pack()
 
         message_field = Message_field(self._root)
@@ -30,3 +30,7 @@ class UI:
             parser
         )
         preview.pack()
+
+        send_button = ttk.Button(
+            self._root, text="Send all", command=lambda: self._app.mass_send(message_field.get_message(), tbl.get_all_rows()))
+        send_button.pack()

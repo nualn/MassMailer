@@ -14,11 +14,10 @@ class Tbl:
         self._frame.pack()
 
     def get_all_rows(self):
-        model = self._table.getModel
-        records = model.getAllCells()
-        return records.values()
+        model = self._table.getModel()
+        records = model.getAllCells().values()
+        column_names = model.columnNames
+        return list(map(lambda rec: {column_names[i]: rec[i] for i in range(len(column_names))}, records))
 
     def get_selected_row(self):
-        rec = self._table.get_currentRecord()
-        print(rec)
-        return rec
+        return self._table.get_currentRecord()

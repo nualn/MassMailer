@@ -22,7 +22,7 @@ class Message_field:
             self._frame,
             wrap=WORD,
             width=40,
-            height=10,
+            height=5,
             font=("Arial",
                   15)
         )

@@ -28,7 +28,7 @@ class Preview:
             state='disabled',
             wrap=WORD,
             width=40,
-            height=10,
+            height=5,
             font=("Arial",
                   15)
         )

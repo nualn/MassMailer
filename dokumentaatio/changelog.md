@@ -11,7 +11,7 @@
   - Lisätty luokka UI, jolla käyttäjä voi luoda viestin, luoda muuttujia ja esikatsella parsittua viestiä.
   - Refaktoroitu UI luokiksi Message_field ja Preview
 
-## Viikko 4
+## Viikko 5
 - Käyttäjä voi kirjautua oauth2-protokollalla gmail-tililleen.
 - Käyttäjä voi lähettää massasähköposteja.
 - Lisätty luokat Authorizer, GmailService, App sekä Loginout.

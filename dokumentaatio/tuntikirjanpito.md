@@ -9,4 +9,5 @@
 |27.11.22| 2 | Lintterin ja formatterin lisääminen, dokumentaation päivittäminen. |
 |2.12.22| 3 | Oauth ja gmailAPIn luokkien implementointi |
 |2.12.22| 2 | UI:n tunkkaaminen |
-| **yht.** | **22** | 
+|4.12.22| 3 | UI:n laajentamista |
+| **yht.** | **25** | 

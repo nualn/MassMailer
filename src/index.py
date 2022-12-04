@@ -1,14 +1,15 @@
 from tkinter import Tk
-from mail.gmail_service import Gmail_service
+from mail.gmail_service import GmailService
 from mail.mailer import Mailer
 from ui.ui import UI
 from oauth.authorizer import Authorizer
 
 test_message = {
-        'to': 'nuuttinikkola1+1@gmail.com',
-        'subject': 'test',
-        'body': 'test test test'
-    }
+    'to': 'nuuttinikkola1+1@gmail.com',
+    'subject': 'test',
+    'body': 'test test test'
+}
+
 
 def main():
     window = Tk()

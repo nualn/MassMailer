@@ -8,14 +8,15 @@ class Message_field:
 
         to_label = ttk.Label(self._frame, text="To")
         to_label.pack()
-        
-        self.to_entry = ttk.Entry(self._frame, width=40, font=("Arial",15))
+
+        self.to_entry = ttk.Entry(self._frame, width=40, font=("Arial", 15))
         self.to_entry.pack()
 
         subj_label = ttk.Label(self._frame, text="Subject")
         subj_label.pack()
-        
-        self.subject_entry = ttk.Entry(self._frame, width=40, font=("Arial",15))
+
+        self.subject_entry = ttk.Entry(
+            self._frame, width=40, font=("Arial", 15))
         self.subject_entry.pack()
         self.message_entry = scrolledtext.ScrolledText(
             self._frame,

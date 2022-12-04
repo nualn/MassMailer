@@ -6,6 +6,7 @@ from ui.preview import Preview
 from text_parser import parser
 from ui.loginout import Loginout
 
+
 class UI:
     def __init__(self, root, auth):
         self._root = root
@@ -23,9 +24,9 @@ class UI:
         tbl.pack()
 
         preview = Preview(
-            self._root, 
+            self._root,
             message_field.get_message,
-            tbl.get_selected_row, 
+            tbl.get_selected_row,
             parser
         )
         preview.pack()

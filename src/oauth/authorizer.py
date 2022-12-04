@@ -8,17 +8,19 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/gmail.compose']
 
+
 class Authorizer:
     def __init__(self):
         self.creds = None
 
     def is_authorized(self):
         return self.creds and self.creds.valid
-    
+
     def login(self):
         try:
             if not self.creds and os.path.exists('token.json'):
-                self.creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+                self.creds = Credentials.from_authorized_user_file(
+                    'token.json', SCOPES)
             if not self.is_authorized():
                 if self.creds and self.creds.expired and self.creds.refresh_token:
                     self.creds.refresh(Request())
@@ -27,7 +29,7 @@ class Authorizer:
                         'credentials.json', SCOPES)
                     self.creds = flow.run_local_server(port=0)
                 # Save the credentials for the next run
-                with open('token.json', 'w') as token:
+                with open('token.json', 'w', encoding="utf-8") as token:
                     token.write(self.creds.to_json())
         except Exception:
             self.logout()
@@ -36,10 +38,6 @@ class Authorizer:
         self.creds = None
         if os.path.exists('token.json'):
             os.remove('token.json')
-    
+
     def get_creds(self):
         return self.creds
-
-            
-        
-

@@ -9,15 +9,15 @@ class Tbl:
 
         self._table = TableCanvas(self._frame)
         self._table.show()
-    
+
     def pack(self):
         self._frame.pack()
-        
+
     def get_all_rows(self):
         model = self._table.getModel
         records = model.getAllCells()
         return records.values()
-    
+
     def get_selected_row(self):
         rec = self._table.get_currentRecord()
         print(rec)

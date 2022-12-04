@@ -12,13 +12,15 @@ class Preview:
         to_label = ttk.Label(self._frame, text="To")
         to_label.pack()
 
-        self.preview_to = ttk.Entry(self._frame, width=40, font=("Arial",15), state="disabled")
+        self.preview_to = ttk.Entry(
+            self._frame, width=40, font=("Arial", 15), state="disabled")
         self.preview_to.pack()
 
         subj_label = ttk.Label(self._frame, text="Subject")
         subj_label.pack()
 
-        self.preview_subject = ttk.Entry(self._frame, width=40, font=("Arial",15), state="disabled")
+        self.preview_subject = ttk.Entry(
+            self._frame, width=40, font=("Arial", 15), state="disabled")
         self.preview_subject.pack()
 
         self.preview_text = scrolledtext.ScrolledText(
@@ -49,8 +51,10 @@ class Preview:
         self.preview_text.delete("1.0", "end-1c")
 
         self.preview_to.insert(0, self._parser.parse(message["to"], variables))
-        self.preview_subject.insert(0, self._parser.parse(message["subject"], variables))
-        self.preview_text.insert("1.0", self._parser.parse(message["body"], variables))
+        self.preview_subject.insert(
+            0, self._parser.parse(message["subject"], variables))
+        self.preview_text.insert(
+            "1.0", self._parser.parse(message["body"], variables))
 
         self.preview_to.configure(state="disabled")
         self.preview_subject.configure(state="disabled")

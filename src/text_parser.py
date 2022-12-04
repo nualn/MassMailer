@@ -6,4 +6,5 @@ class _Parser:
             result = result.replace(f"[{key}]", str(variable_dict[key]))
         return result
 
+
 parser = _Parser()

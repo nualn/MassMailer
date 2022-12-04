@@ -1,5 +1,6 @@
 from tkinter import ttk
 
+
 class Loginout:
     def __init__(self, root, auth):
         self._auth = auth
@@ -9,8 +10,8 @@ class Loginout:
         self.user_label = ttk.Label(self._root, text="")
         self.user_label.pack()
 
-        self.loginout_button = ttk.Button(self._frame, text="Log In", 
-                                command=self.loginout_press)
+        self.loginout_button = ttk.Button(self._frame, text="Log In",
+                                          command=self.loginout_press)
         self.loginout_button.pack()
 
     def pack(self):

@@ -16,11 +16,10 @@ def main():
     window.geometry('500x1000')
 
     auth = Authorizer()
-    auth.login()
-    gmail = Gmail_service(auth.get_creds())
-    mailer = Mailer(gmail)
+    # gmail = Gmail_service(auth.get_creds())
+    # mailer = Mailer(gmail)
 
-    user_interface = UI(window)
+    user_interface = UI(window, auth)
     user_interface.start()
 
     window.mainloop()

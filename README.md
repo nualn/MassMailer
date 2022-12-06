@@ -10,6 +10,8 @@ Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköpost
 
 [Arkkitehtuuri](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+[Viikko 5 release](https://github.com/nualn/ot-harjoitustyo/releases/tag/viikko5)
+
 ## Sovelluksen tila
 
 Käyttäjä pystyy määrittämään muuttujia sovelluksen taulukkokenttään. Ne voi sijoittaa "To"-, "Subject" ja viestikentiin valitsemalla halutun rivin taulukosta ja painamalla Preview-nappia. Sijoitus kohdat määritellään lisäämällä tekstiin sarakkeen nimi hakasulkujen sisällä, esim [1]. Painamalla "Send all"-nappia kaikki viestit lähetetään GmailAPI:n kautta. Viestien lähettäminen vaatii sisäänkirjautumista. Sisäänkirjautumista varten tarvitset projektin juureen Google Cloud -projektin clientID:n sisältävän tiedoston nimellä *credentials.json*. Oman projektin voit luoda [näillä ohjeilla](https://developers.google.com/workspace/guides/create-project) ja clientID:n generointiin apua saa [täältä](https://developers.google.com/identity/protocols/oauth2/native-app#creatingcred). Voidaan myös puhua itse käyttämäni clientId:n jakamisesta sähköpostilla nuutti.nikkola@helsinki.fi tai Telegramilla @nuuttin.

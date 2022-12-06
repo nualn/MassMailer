@@ -1,4 +1,5 @@
 from tkinter import Tk
+from googleapiclient.discovery import build
 from app import App
 from mail.gmail_service import GmailService
 from ui.ui import UI
@@ -18,7 +19,7 @@ def main():
     window.geometry('500x1000')
 
     auth = Authorizer()
-    gmail = GmailService()
+    gmail = GmailService(build)
     app = App(auth, gmail, parser)
 
     user_interface = UI(window, app)

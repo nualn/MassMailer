@@ -1,21 +1,21 @@
 import base64
 from email.message import EmailMessage
-from googleapiclient.discovery import build
 
 
 class GmailService:
-    def __init__(self):
+    def __init__(self, build_function):
         self.service = None
         self.email = None
+        self.build_function = build_function
 
     def build(self, creds):
-        self.service = build('gmail', 'v1', credentials=creds)
+        self.service = self.build_function('gmail', 'v1', credentials=creds)
         self.email = self.service.users()\
             .getProfile(userId='me').execute()['emailAddress']
 
     def destroy(self):
         self.service = None
-        self.email = ""
+        self.email = None
 
     def send(self, receipent, subject, body):
         message = self._create_message(receipent, subject, body)
@@ -39,3 +39,6 @@ class GmailService:
 
     def get_email(self):
         return self.email
+
+    def get_service(self):
+        return self.service

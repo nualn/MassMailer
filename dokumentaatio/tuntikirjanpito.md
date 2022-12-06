@@ -12,4 +12,5 @@
 |4.12.22| 3 | UI:n laajentamista |
 |4.12.22| 3 | Sähköpostien lähettämisen implementointi |
 |6.12.22| 3 | Testien kirjoittamista |
-| **yht.** | **31** | 
+|6.12.22| 2 | GitHub release & viikon 5 dokumentaatiot |
+| **yht.** | **33** | 

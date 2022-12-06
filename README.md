@@ -10,6 +10,8 @@ Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköpost
 
 [Arkkitehtuuri](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
+## Github release
+
 [Viikko 5 release](https://github.com/nualn/ot-harjoitustyo/releases/tag/viikko5)
 
 ## Sovelluksen tila

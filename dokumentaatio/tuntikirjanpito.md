@@ -14,4 +14,5 @@
 |6.12.22| 3 | Testien kirjoittamista |
 |6.12.22| 2 | GitHub release & viikon 5 dokumentaatiot |
 |10.12.22| 6 | Viestien tallentaminen tietokantaan |
-| **yht.** | **39** | 
+|11.12.22| 2 | UI:n layoutin parantaminen |
+| **yht.** | **41** | 

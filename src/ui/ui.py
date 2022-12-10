@@ -17,7 +17,7 @@ class UI:
         loginout = Loginout(self._root, self._app)
         loginout.pack()
 
-        message_field = Message_field(self._root)
+        message_field = Message_field(self._root, self._app)
         message_field.pack()
 
         tbl = Tbl(self._root)
@@ -32,5 +32,6 @@ class UI:
         preview.pack()
 
         send_button = ttk.Button(
-            self._root, text="Send all", command=lambda: self._app.mass_send(message_field.get_message(), tbl.get_all_rows()))
+            self._root, text="Send all", command=lambda: self._app.mass_send(message_field.get_message(), tbl.get_all_rows())
+        )
         send_button.pack()

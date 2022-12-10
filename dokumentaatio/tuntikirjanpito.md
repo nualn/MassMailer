@@ -13,4 +13,5 @@
 |4.12.22| 3 | Sähköpostien lähettämisen implementointi |
 |6.12.22| 3 | Testien kirjoittamista |
 |6.12.22| 2 | GitHub release & viikon 5 dokumentaatiot |
-| **yht.** | **33** | 
+|10.12.22| 6 | Viestien tallentaminen tietokantaan |
+| **yht.** | **39** | 

@@ -5,3 +5,5 @@ htmlcov
 .vscode
 token.json
 credentials.json
+data
+!.gitkeep

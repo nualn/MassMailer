@@ -5,6 +5,7 @@ class Selector:
     def __init__(self, root, options):
         self._root = root
         self._frame = Frame(self._root)
+        self.grid = self._frame.grid
 
         self._variable = StringVar(self._frame)
         self._variable.set("New")  # default value
@@ -12,7 +13,7 @@ class Selector:
 
         self._menu = OptionMenu(self._frame, self._variable, "")
         self.refresh_options(options)
-        self._menu.pack()
+        self._menu.grid()
 
     def pack(self):
         self._frame.pack()

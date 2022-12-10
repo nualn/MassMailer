@@ -7,24 +7,18 @@ from ui.ui import UI
 from oauth.authorizer import Authorizer
 from text_parser import parser
 
-test_message = {
-    'to': 'nuuttinikkola1+1@gmail.com',
-    'subject': 'test',
-    'body': 'test test test'
-}
-
 
 def main():
     window = Tk()
     window.title("MassMailer")
-    window.geometry('500x1000')
+    window.geometry('1400x600')
 
     auth = Authorizer()
     gmail = GmailService(build)
     app = App(auth, gmail, parser, message_repository)
 
     user_interface = UI(window, app)
-    user_interface.start()
+    user_interface.pack(pady=20, padx=20)
 
     window.mainloop()
 

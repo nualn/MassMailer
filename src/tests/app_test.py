@@ -10,7 +10,8 @@ class TestApp(unittest.TestCase):
         self.mail_service.get_email.return_value = 'mock@email.com'
         self.parser = Mock()
         self.parser.parse.return_value = 'data'
-        self.app = App(self.auth, self.mail_service, self.parser)
+        self.message_repository = Mock()
+        self.app = App(self.auth, self.mail_service, self.parser, self.message_repository)
 
     def test_mass_send(self):
         message = {

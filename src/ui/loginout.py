@@ -1,4 +1,4 @@
-from tkinter import ttk
+from tkinter import ttk, W, E
 
 
 class Loginout:
@@ -6,16 +6,15 @@ class Loginout:
         self._app = app
         self._root = root
         self._frame = ttk.Frame(self._root)
+        self.grid = self._frame.grid
+        self.pack = self._frame.pack
 
-        self.user_label = ttk.Label(self._root, text="")
-        self.user_label.pack()
+        self.loginout_button = ttk.Button(
+            self._frame, text="Log In", command=self.loginout_press)
+        self.loginout_button.pack(side='right')
 
-        self.loginout_button = ttk.Button(self._frame, text="Log In",
-                                          command=self.loginout_press)
-        self.loginout_button.pack()
-
-    def pack(self):
-        self._frame.pack()
+        self.user_label = ttk.Label(self._frame, text="")
+        self.user_label.pack(side='right')
 
     def loginout_press(self):
         if self.loginout_button['text'] == "Log In":

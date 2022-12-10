@@ -6,12 +6,11 @@ class Tbl:
     def __init__(self, root):
         self._root = root
         self._frame = ttk.Frame(self._root)
+        self.pack = self._frame.pack
+        self.grid = self._frame.grid
 
         self._table = TableCanvas(self._frame)
         self._table.show()
-
-    def pack(self):
-        self._frame.pack()
 
     def get_all_rows(self):
         model = self._table.getModel()

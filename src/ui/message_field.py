@@ -1,6 +1,8 @@
-from tkinter import ttk, WORD, scrolledtext, END
+from tkinter import ttk, WORD, scrolledtext, END, W
 from ui.selector import Selector
 from ast import literal_eval
+
+FIELD_WIDTH = 10
 
 
 class Message_field:
@@ -8,38 +10,50 @@ class Message_field:
         self._root = root
         self._frame = ttk.Frame(self._root)
         self._app = app
+        self.pack = self._frame.pack
+        self.grid = self._frame.grid
 
-        self._selector = Selector(self._frame, self._app.list_messages())
-        self._selector.pack()
+        selector_frame = ttk.Frame(self._frame)
+        selector_frame.grid(row=12, column=1, columnspan=3, sticky=W, pady=2)
+
+        self._selector = Selector(selector_frame, self._app.list_messages())
+        self._selector.grid(row=0, column=0, sticky=W, pady=2)
 
         save_button = ttk.Button(
-            self._frame, text="Save", command=self.save_message)
-        save_button.pack()
+            selector_frame, text="Save", command=self.save_message)
+        save_button.grid(row=0, column=1, sticky=W, pady=2)
         load_button = ttk.Button(
-            self._frame, text="Load", command=self.load_message)
-        load_button.pack()
+            selector_frame, text="Load", command=self.load_message)
+        load_button.grid(row=0, column=2, sticky=W, pady=2)
 
-        to_label = ttk.Label(self._frame, text="To")
-        to_label.pack()
+        to_label = ttk.Label(self._frame, text="To:")
+        to_label.grid(row=0, column=0, sticky=W, pady=2)
 
-        self.to_entry = ttk.Entry(self._frame, width=40, font=("Arial", 15))
-        self.to_entry.pack()
+        self.to_entry = ttk.Entry(self._frame, width=30, font=("Arial", 15))
+        self.to_entry.grid(
+            row=0, column=1, columnspan=FIELD_WIDTH, sticky=W, pady=2)
 
-        subj_label = ttk.Label(self._frame, text="Subject")
-        subj_label.pack()
+        subj_label = ttk.Label(self._frame, text="Subject:")
+        subj_label.grid(row=1, column=0, sticky=W, pady=2)
 
         self.subject_entry = ttk.Entry(
-            self._frame, width=40, font=("Arial", 15))
-        self.subject_entry.pack()
+            self._frame, width=30, font=("Arial", 15))
+        self.subject_entry.grid(
+            row=1, column=1, columnspan=FIELD_WIDTH, sticky=W, pady=2)
+
+        body_label = ttk.Label(self._frame, text="Body:")
+        body_label.grid(row=2, column=0, sticky=W, pady=2)
+
         self.message_entry = scrolledtext.ScrolledText(
             self._frame,
             wrap=WORD,
-            width=40,
-            height=5,
+            width=30,
+            height=15,
             font=("Arial",
                   15)
         )
-        self.message_entry.pack(pady=20)
+        self.message_entry.grid(
+            row=2, column=1, columnspan=FIELD_WIDTH, rowspan=10, sticky=W, pady=2)
 
     def get_message(self):
         return {
@@ -73,6 +87,3 @@ class Message_field:
             return
         message = self._app.load_message(selection["id"])
         self.set_message(message)
-
-    def pack(self):
-        self._frame.pack()

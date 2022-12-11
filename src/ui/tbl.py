@@ -1,5 +1,5 @@
-from tkintertable import TableCanvas, TableModel
-from tkinter import ttk, BOTH
+from tkintertable import TableCanvas
+from tkinter import ttk
 
 
 class Tbl:
@@ -15,8 +15,16 @@ class Tbl:
     def get_all_rows(self):
         model = self._table.getModel()
         records = model.getAllCells().values()
-        column_names = model.columnNames
+        column_names = model.columnlabels
         return list(map(lambda rec: {column_names[i]: rec[i] for i in range(len(column_names))}, records))
 
     def get_selected_row(self):
-        return self._table.get_currentRecord()
+        model = self._table.getModel()
+        column_lables = model.columnlabels
+        selected = self._table.get_currentRecord()
+        res = {}
+        for column_name in column_lables.keys():
+            if column_name in selected:
+                res[column_lables[column_name]] = selected[column_name]
+        return res
+

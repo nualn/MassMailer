@@ -11,8 +11,7 @@ from text_parser import parser
 def main():
     window = Tk()
     window.title("MassMailer")
-    window.geometry('1400x600')
-
+    window.geometry('1300x500')
     auth = Authorizer()
     gmail = GmailService(build)
     app = App(auth, gmail, parser, message_repository)

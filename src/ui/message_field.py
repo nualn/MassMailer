@@ -26,22 +26,22 @@ class Message_field:
             selector_frame, text="Load", command=self.load_message)
         load_button.grid(row=0, column=2, sticky=W, pady=2)
 
-        to_label = ttk.Label(self._frame, text="To:")
+        to_label = ttk.Label(self._frame, text="To: ")
         to_label.grid(row=0, column=0, sticky=W, pady=2)
 
-        self.to_entry = ttk.Entry(self._frame, width=30, font=("Arial", 15))
+        self.to_entry = ttk.Entry(self._frame, width=30, font=("Arial", 11))
         self.to_entry.grid(
             row=0, column=1, columnspan=FIELD_WIDTH, sticky=W, pady=2)
 
-        subj_label = ttk.Label(self._frame, text="Subject:")
+        subj_label = ttk.Label(self._frame, text="Subject: ")
         subj_label.grid(row=1, column=0, sticky=W, pady=2)
 
         self.subject_entry = ttk.Entry(
-            self._frame, width=30, font=("Arial", 15))
+            self._frame, width=30, font=("Arial", 11))
         self.subject_entry.grid(
             row=1, column=1, columnspan=FIELD_WIDTH, sticky=W, pady=2)
 
-        body_label = ttk.Label(self._frame, text="Body:")
+        body_label = ttk.Label(self._frame, text="Body: ")
         body_label.grid(row=2, column=0, sticky=W, pady=2)
 
         self.message_entry = scrolledtext.ScrolledText(
@@ -50,7 +50,7 @@ class Message_field:
             width=30,
             height=15,
             font=("Arial",
-                  15)
+                  11)
         )
         self.message_entry.grid(
             row=2, column=1, columnspan=FIELD_WIDTH, rowspan=10, sticky=W, pady=2)

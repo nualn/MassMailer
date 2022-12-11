@@ -11,21 +11,21 @@ class Preview:
         self.pack = self._frame.pack
         self.grid = self._frame.grid
 
-        to_label = ttk.Label(self._frame, text="To")
+        to_label = ttk.Label(self._frame, text="To: ")
         to_label.grid(row=0, column=0, sticky=W, pady=2)
 
         self.preview_to = ttk.Entry(
-            self._frame, width=30, font=("Arial", 15), state="disabled")
+            self._frame, width=30, font=("Arial", 11), state="disabled")
         self.preview_to.grid(row=0, column=1, sticky=W, pady=2)
 
-        subj_label = ttk.Label(self._frame, text="Subject")
+        subj_label = ttk.Label(self._frame, text="Subject: ")
         subj_label.grid(row=1, column=0, sticky=W, pady=2)
 
         self.preview_subject = ttk.Entry(
-            self._frame, width=30, font=("Arial", 15), state="disabled")
+            self._frame, width=30, font=("Arial", 11), state="disabled")
         self.preview_subject.grid(row=1, column=1, sticky=W, pady=2)
 
-        body_label = ttk.Label(self._frame, text="Body:")
+        body_label = ttk.Label(self._frame, text="Body: ")
         body_label.grid(row=2, column=0, sticky=W, pady=2)
 
         self.preview_text = scrolledtext.ScrolledText(
@@ -35,7 +35,7 @@ class Preview:
             width=30,
             height=15,
             font=("Arial",
-                  15)
+                  11)
         )
         self.preview_text.grid(row=2, column=1, rowspan=10, sticky=W, pady=2)
 

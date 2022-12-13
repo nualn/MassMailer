@@ -2,7 +2,7 @@
 
 TODO: Lisää kuvankaappauksia
 
-Lataa projektin viimeisimmän [releasen](https://github.com/nualn/ot-harjoitustyo/releases) lähdekoodi valitsemalla _Assets_-osion alta _Source code_.
+Lataa projektin viimeisimmän lähdekoodi viimeisimmästä [releasesta](https://github.com/nualn/ot-harjoitustyo/releases).
 
 ## Konfigurointi
 Jos haluaa lähettää sovelluksella sähköpostia, tulee siihen kirjautua Google-käyttäjällä. Sisäänkirjautumista varten tarvitset projektin juureen Google Cloud -projektin clientID:n sisältävän tiedoston nimellä *credentials.json*. Oman projektin voit luoda [näillä ohjeilla](https://developers.google.com/workspace/guides/create-project) ja clientID:n generointiin apua saa [täältä](https://developers.google.com/identity/protocols/oauth2/native-app#creatingcred). Voidaan myös puhua itse käyttämäni clientId:n jakamisesta sähköpostilla nuutti.nikkola@helsinki.fi tai Telegramilla @nuuttin.

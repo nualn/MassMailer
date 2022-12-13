@@ -41,7 +41,7 @@ Painamalla ikkunan alareunassa olevaa "Send all"-nappia voi lähettää massasä
 Viestipohja tallennetaan tietokantaan UI:n Save-nappulaa painamalla. Viereisestä valikosta voi myös valita tallennetaanko uusi viesti vai päivitetäänkö jo olemassa olevaa viestiä.
 
 
-## Viestiphjien lataaminen tietokannasta
+## Viestipohjien lataaminen tietokannasta
 
 Viestipohja ladataan tietokannasta UI:n Load-nappulaa painamalla. Viereisestä valikosta voi valita, mikä viesti halutaan ladata.
 

@@ -4,7 +4,7 @@ class App:
 
     def __init__(self, auth, mail_service, parser, message_repository):
         """Constructor for the App class, creates a new instance of the App class
-        
+
         Args:
             auth (Auth): An instance of the Auth class
             mail_service (MailService): An instance of the MailService class
@@ -18,7 +18,7 @@ class App:
 
     def mass_send(self, message, rows):
         """Sends custom emails to recipients accordin to values in the rows list
-        
+
         Args:
             message (dict): A dictionary with properties "to", "subject" and "body"
             rows (list): A list of dictionaries with values for the message
@@ -45,8 +45,8 @@ class App:
 
     def get_email(self):
         """Returns the email address of the user
-        
-        Returns: 
+
+        Returns:
             The email of the logged in user as a string
         """
 
@@ -57,7 +57,7 @@ class App:
 
         Args:
             msg_id (int): The id of the message to load
-        Returns: 
+        Returns:
             A dictionary with properties "to", "subject", and "body"
         """
 
@@ -85,7 +85,7 @@ class App:
 
     def list_messages(self):
         """Returns a list of all messages in the database
-        
+
         Returns: A list of dicts with properties "id" and "subject"
         """
 

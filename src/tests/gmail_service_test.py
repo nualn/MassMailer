@@ -37,11 +37,11 @@ class TestGmailService(unittest.TestCase):
         )
 
     def test_create_message(self):
-        self.service.email = 'test@gmail.com'
+        self.service._email = 'test@gmail.com'
         message = self.service._create_message(
             'receipient@gmail.com', 'subject', 'body')
         self.assertEqual(message['raw'], self.body_encoded)
 
     def test_get_email(self):
-        self.service.email = 'test@gmail.com'
+        self.service._email = 'test@gmail.com'
         self.assertEqual(self.service.get_email(), 'test@gmail.com')

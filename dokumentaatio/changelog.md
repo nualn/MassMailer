@@ -19,3 +19,6 @@
 
 ## Viikko 6
 - Käyttäjä voi tallentaa ja ladata viestejä tietokannasta
+  - Lisätty luokka MessageRepository
+  - Lisätty UI luokka Selector, joka toteuttaa dropdown menun
+  - UI:hin lisätty valitsin sekä save- ja load-napit viestine tietokantaan talentamiseen ja sieltä lataamiseen.

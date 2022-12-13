@@ -16,4 +16,5 @@
 |10.12.22| 6 | Viestien tallentaminen tietokantaan |
 |11.12.22| 4 | UI:n layoutin parantaminen |
 |13.12.22| 2 | Testien kirjoittamista ja bugien fiksailua |
-| **yht.** | **47** | 
+|13.12.22| 2 | DocString dokumentointia |
+| **yht.** | **49** | 

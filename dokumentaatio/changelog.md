@@ -16,3 +16,6 @@
 - Käyttäjä voi lähettää massasähköposteja.
 - Lisätty luokat Authorizer, GmailService, App sekä Loginout.
 - Luokka Tbl:in toteutus vaihdettu käyttämään tkintertable-kirjastoa 
+
+## Viikko 6
+- Käyttäjä voi tallentaa ja ladata viestejä tietokannasta

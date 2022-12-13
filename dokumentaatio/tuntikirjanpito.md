@@ -17,4 +17,5 @@
 |11.12.22| 4 | UI:n layoutin parantaminen |
 |13.12.22| 2 | Testien kirjoittamista ja bugien fiksailua |
 |13.12.22| 2 | DocString dokumentointia |
-| **yht.** | **49** | 
+|13.12.22| 2 | Käyttöohjeet, arkkitehtuuri, readme päivittäminen |
+| **yht.** | **51** | 

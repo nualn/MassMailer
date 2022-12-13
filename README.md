@@ -2,13 +2,15 @@
 Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköposteja, määrittää muuttujille vastaanottajakohtaisia arvoja, sekä lähettää määritellyt arvot omaavia sähköposteja.
 
 ## Dokumentaatio
-[Vaatimusmäärittely](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 
-[Tuntikirjanpito](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+[Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
-[Changelog](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/changelog.md)
+[Changelog](./dokumentaatio/changelog.md)
 
-[Arkkitehtuuri](https://github.com/nualn/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+[Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
+
+[Käyttöohje](./dokumentaatio/kayttoohje.md)
 
 ## Github release
 

@@ -1,4 +1,28 @@
-## Class diagram
+# Arkkitehtuurikuvaus
+
+## Rakenne
+
+## Pakkausrakenne
+
+Ohjelman rakenne noudattaa pääosin kolmitasoista kerrosarkkitehtuuria. Koodin pakkausrakenne on seuraava:
+
+![Pakkausrakenne](./kuvat/pakkausrakenne.png)
+
+Käyttöliittymästä vastaava koodi on pakkauksessa ui, sovelluslogiikasta vastaava koodi pakkauksessa app ja tietojen pysyväistallennuksesta vastaavan koodi pakkauksessa repositories. Pakkaus gmail_api sisältää luokat, jotka tarjoavat rajapinnan Gmail API:in käyttämiseen. Pakkaus utils sisältää apuluokkia, jotka tarjoavat apuja sovelluksen toiminnallisuuden toteuttamiseen.
+
+## Käyttöliittymä
+
+Sovelluksen käyttöliittymä sisältää vain yhden näkymän. Näkymä voidaan jakaa kolmeen pääosioon:
+- Viestieditori
+- Muuttujataulukko
+- Esikatselu
+Lisäksi käyttöliittymässä on "Login"- ja "Send all"-napit
+
+
+## Sovelluslogiikka
+
+Alla oleva luokkakaavio kuvaa sovelluksen luokkien suhteita toisiinsa.
+
 ```mermaid
 classDiagram
 
@@ -10,20 +34,9 @@ App "1"--"1" GmailService
 App "1"--"1" MessageRepository
 
 ```
-## Folder diagram
-```mermaid
-graph TD
+App-luokka toimii sovelluksen kontrollerina. Se vastaa käyttöliittymän toiminnallisuuksien toteuttamisesta. App-luokka käyttää GmailService-luokkaa viestien lähettämiseen ja MessageRepository-luokkaa viestien tallentamiseen ja lataamiseen tietokannasta. App-luokka käyttää Authorizer-luokkaa käyttäjän autentikoimiseen ja Parser-luokkaa muuttujien viesteihin parsimiseen.
 
-A[app.py] --> B[ui]
-A --> C[parser]
-
-B --> D[message_field.py]
-B --> E[preview.py]
-B --> F[selector.py]
-
-C --> G[parser.py]
-
-``` 
+Myös käyttöliittymä käyttää Parser-luokkaa esikatseltavien viestien parsimiseen.
 
 ## Päätoiminnallisuudet
 

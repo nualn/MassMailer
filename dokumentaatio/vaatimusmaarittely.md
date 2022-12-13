@@ -21,6 +21,7 @@ Sovelluksessa on vain yksi käyttäjärooli.
 
 ## Jatkokehitysideoita
 
+- [x] Käyttäjä pystyy lataamaan vastaanottaja-muuttuja-listoja .table-tiedostoina.
+- [x] Käyttäjä pystyy tallentamaan vastaanottaja-muuttuja-listoja .table-tiedostoina.
+- [x] Käyttäjä pystyy tallentamaan ja lataamaan viestipohjia tietokannasta.
 - [ ] Käyttäjä voi lisätä viesteihin liitteitä.
-- [x] Käyttäjä pystyy lataamaan vastaanottaja-muuttuja-listoja CSV-tiedostoina.
-- [x] Käyttäjä pystyy tallentamaan vastaanottaja-muuttuja-listoja CSV-tiedostoina.

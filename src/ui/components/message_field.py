@@ -1,6 +1,5 @@
 from tkinter import ttk, WORD, scrolledtext, END, W
 from ui.components.selector import Selector
-from ast import literal_eval
 
 FIELD_WIDTH = 10
 

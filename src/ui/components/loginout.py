@@ -1,4 +1,4 @@
-from tkinter import ttk, W, E
+from tkinter import ttk
 
 
 class Loginout:

@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import Mock
-from oauth.authorizer import Authorizer
+from google_api.authorizer import Authorizer
 
 
 # test Authorizer class

@@ -4,7 +4,7 @@ import unittest
 from database.db_connection import get_db_conn
 from database.init_db import initialize_db
 
-from database.message_repository import MessageRepository, message_repository
+from repositories.message_repository import MessageRepository, message_repository
 
 
 class TestMessageRepository(unittest.TestCase):

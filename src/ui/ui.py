@@ -1,10 +1,10 @@
-from tkinter import ttk, WORD, scrolledtext, W, E
+from tkinter import ttk, W, E
 
-from ui.tbl import Tbl
-from ui.message_field import Message_field
-from ui.preview import Preview
-from text_parser import parser
-from ui.loginout import Loginout
+from ui.components.tbl import Tbl
+from ui.components.message_field import Message_field
+from ui.components.preview import Preview
+from utils.text_parser import parser
+from ui.components.loginout import Loginout
 
 
 class UI:

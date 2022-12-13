@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import Mock
-from mail.gmail_service import GmailService
+from google_api.gmail_service import GmailService
 
 
 class TestGmailService(unittest.TestCase):

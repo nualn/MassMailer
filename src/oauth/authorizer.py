@@ -10,32 +10,35 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.compose']
 
 
 class Authorizer:
-    def __init__(self):
-        self.creds = None
+    def __init__(self, request=Request, credentials=Credentials, flow=InstalledAppFlow):
+        self._loaded_creds = None
+        self._request = request
+        self._credentials = credentials
+        self._flow = flow
 
     def is_authorized(self):
-        return self.creds and self.creds.valid
+        return self._loaded_creds and self._loaded_creds.valid
 
     def _load_creds(self):
-        self.creds = Credentials.from_authorized_user_file(
+        self._loaded_creds = self._credentials.from_authorized_user_file(
             'token.json', SCOPES)
 
     def _get_new_creds(self):
-        flow = InstalledAppFlow.from_client_secrets_file(
+        flow = self._flow.from_client_secrets_file(
             'credentials.json', SCOPES)
-        self.creds = flow.run_local_server(port=0)
+        self._loaded_creds = flow.run_local_server(port=0)
 
     def _save_creds(self):
         with open('token.json', 'w', encoding="utf-8") as token:
-            token.write(self.creds.to_json())
+            token.write(self._loaded_creds.to_json())
 
     def login(self):
         try:
-            if not self.creds and os.path.exists('token.json'):
+            if not self._loaded_creds and os.path.exists('token.json'):
                 self._load_creds()
             if not self.is_authorized():
-                if self.creds and self.creds.expired and self.creds.refresh_token:
-                    self.creds.refresh(Request())
+                if self._loaded_creds and self._loaded_creds.expired and self._loaded_creds.refresh_token:
+                    self._loaded_creds.refresh(self._request())
                 else:
                     self._get_new_creds()
                 self._save_creds()
@@ -43,9 +46,9 @@ class Authorizer:
             self.logout()
 
     def logout(self):
-        self.creds = None
+        self._loaded_creds = None
         if os.path.exists('token.json'):
             os.remove('token.json')
 
     def get_creds(self):
-        return self.creds
+        return self._loaded_creds

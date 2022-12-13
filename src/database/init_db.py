@@ -1,5 +1,3 @@
-from database.db_connection import get_db_conn
-
 
 def drop_table(conn):
     """Deletes the messgaes table from the database.
@@ -28,9 +26,11 @@ def create_table(conn):
     conn.commit()
 
 
-def initialize_database():
-    """Initializes a database with a messages table"""
+def initialize_db(conn):
+    """Initializes a database with a messages table
+    Args:
+        connection: Connection object for the database
+    """
 
-    conn = get_db_conn()
     drop_table(conn)
     create_table(conn)

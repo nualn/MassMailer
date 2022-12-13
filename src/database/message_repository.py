@@ -11,7 +11,7 @@ class MessageRepository:
         messages = cursor.fetchall()
         return list(map(lambda x: {"id": x[0], "subject": x[1]}, messages))
 
-    def get_by_msg_id(self, msg_id):
+    def get_by_id(self, msg_id):
         cursor = self._conn.cursor()
         cursor.execute(
             "SELECT recipient, subject, body FROM messages WHERE id = ?;",

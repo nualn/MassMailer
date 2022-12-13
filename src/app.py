@@ -26,7 +26,7 @@ class App:
         return self._mail_service.get_email()
 
     def load_message(self, msg_id):
-        return self._message_repository.get_by_msg_id(msg_id)
+        return self._message_repository.get_by_id(msg_id)
 
     def save_message(self, message):
         self._message_repository.create(

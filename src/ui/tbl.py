@@ -15,8 +15,9 @@ class Tbl:
     def get_all_rows(self):
         model = self._table.getModel()
         records = model.getAllCells().values()
-        column_names = model.columnlabels
-        return list(map(lambda rec: {column_names[i]: rec[i] for i in range(len(column_names))}, records))
+        model = self._table.getModel()
+        column_lables = list(model.columnlabels.values())
+        return list(map(lambda rec: {column_lables[i]: rec[i] for i in range(len(column_lables))}, records))
 
     def get_selected_row(self):
         model = self._table.getModel()
@@ -27,4 +28,3 @@ class Tbl:
             if column_name in selected:
                 res[column_lables[column_name]] = selected[column_name]
         return res
-

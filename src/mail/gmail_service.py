@@ -17,17 +17,19 @@ class GmailService:
         self.service = None
         self.email = None
 
-    def send(self, receipent, subject, body):
-        message = self._create_message(receipent, subject, body)
+    def send(self, recipient, subject, body):
+        if not recipient:
+            return
+        message = self._create_message(recipient, subject, body)
         self.service.users().messages().send(
             userId='me', body=message
         ).execute()
 
-    def _create_message(self, receipent, subject, body):
+    def _create_message(self, recipient, subject, body):
         mime_message = EmailMessage()
         mime_message.set_content(body)
         mime_message['From'] = self.email
-        mime_message['To'] = receipent
+        mime_message['To'] = recipient
         mime_message['Subject'] = subject
 
         encoded_message = base64.urlsafe_b64encode(mime_message.as_bytes())\

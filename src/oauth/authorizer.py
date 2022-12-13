@@ -37,7 +37,9 @@ class Authorizer:
             if not self._loaded_creds and os.path.exists('token.json'):
                 self._load_creds()
             if not self.is_authorized():
-                if self._loaded_creds and self._loaded_creds.expired and self._loaded_creds.refresh_token:
+                if self._loaded_creds\
+                and self._loaded_creds.expired\
+                and self._loaded_creds.refresh_token:
                     self._loaded_creds.refresh(self._request())
                 else:
                     self._get_new_creds()

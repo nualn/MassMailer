@@ -31,20 +31,20 @@ Sovelluksen käyttöliitymässä on Login-nappi, jota painamalla käyttäjä voi
 
 ## Sähköpostien lähetys
 
-Käyttäjä voi lähettää massasähköposteja. Tämä toiminnallisuus vaatii, että käyttäjä on kirjautunut sisään.
+Painamalla ikkunan alareunassa olevaa "Send all"-nappia voi lähettää massasähköposteja. Tämä toiminnallisuus vaatii, että käyttäjä on kirjautunut sisään.
 
 
-## Viestien tallentaminen tietokantaan
+## Viestipohjien tallentaminen tietokantaan
 
-Käyttäjä voi tallentaa viestin tietokantaan UI:n Save-nappulaa painamalla. Viereisestä valikosta voi myös valita tallennetaanko uusi viesti vai päivitetäänkö jo olemassa olevaa viestiä.
+Viestipohja tallennetaan tietokantaan UI:n Save-nappulaa painamalla. Viereisestä valikosta voi myös valita tallennetaanko uusi viesti vai päivitetäänkö jo olemassa olevaa viestiä.
 
 
-## Viestien lataaminen tietokannasta
+## Viestiphjien lataaminen tietokannasta
 
-Käyttäjä voi ladata viestin tietokannasta UI:n Load-nappulaa painamalla. Viereisestä valikosta voi valita, mikä viesti halutaan ladata.
+Viestipohja ladataan tietokannasta UI:n Load-nappulaa painamalla. Viereisestä valikosta voi valita, mikä viesti halutaan ladata.
 
 
 ## Viestin esikatselu
 
-Käyttäjä voi esikatsella valitsemansa rivin muuttujat sisältävää viestiä UI:n Preview-nappulaa painamalla.
+Muuttujataulukosta tällä hetkellä valittuna olevan rivin muuttujat sisältävää viestiä voi esikatsella UI:n Preview-nappulaa painamalla.
 

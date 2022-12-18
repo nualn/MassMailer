@@ -18,4 +18,5 @@
 |13.12.22| 2 | Testien kirjoittamista ja bugien fiksailua |
 |13.12.22| 2 | DocString dokumentointia |
 |13.12.22| 2 | Käyttöohjeet, arkkitehtuuri, readme päivittäminen |
-| **yht.** | **51** | 
+|18.12.22| 1 | Testien kirjoitusta ja organisointia |
+| **yht.** | **52** | 

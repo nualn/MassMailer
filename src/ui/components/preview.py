@@ -2,7 +2,18 @@ from tkinter import ttk, WORD, scrolledtext, END, W
 
 
 class Preview:
+    """Preview component. Contains the preview of the message"""
+
     def __init__(self, root, get_message, get_variables, parser):
+        """Constructor for the Preview class, creates a new instance of the Preview class
+
+        Args:
+            root (Tk): The root Tk object
+            get_message (function): A function that returns the message base
+            get_variables (function): A function that returns the variables dict
+            parser (function): A function that parses the message
+        """
+
         self._root = root
         self.get_message = get_message
         self.get_variables = get_variables
@@ -44,6 +55,8 @@ class Preview:
         preview_button.grid(row=12, column=1, sticky=W, pady=2)
 
     def get_preview(self):
+        """Gets the preview of the message and displays it in the preview fields"""
+
         message = self.get_message()
         variables = self.get_variables()
 

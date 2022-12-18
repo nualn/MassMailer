@@ -8,7 +8,17 @@ from ui.components.loginout import Loginout
 
 
 class UI:
+    """Main UI class. Contains all UI components and their positioning."""
+
     def __init__(self, root, app):
+        """Constructor for the UI class, creates a new instance of the UI class
+
+        Args:
+            root (Tk): The root Tk object
+            app (App): The App object
+
+        """
+
         self._root = root
         self._app = app
         self._frame = ttk.Frame(self._root)

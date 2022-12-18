@@ -2,7 +2,16 @@ from tkinter import ttk
 
 
 class Loginout:
+    """Loginout component. Contains the loginout button and the user label."""
+
     def __init__(self, root, app):
+        """Constructor for the Loginout class, creates a new instance of the Loginout class
+
+        Args:
+            root (Tk): The root Tk object
+            app (App): The App object
+        """
+
         self._app = app
         self._root = root
         self._frame = ttk.Frame(self._root)
@@ -17,6 +26,7 @@ class Loginout:
         self.user_label.pack(side='right')
 
     def loginout_press(self):
+        """Called when the loginout button is pressed. Changes the text of the button and calls the login or logout function in the App class."""
         if self.loginout_button['text'] == "Log In":
             self.loginout_button.configure(text="Log Out")
             self._app.login()

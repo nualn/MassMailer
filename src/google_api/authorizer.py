@@ -12,14 +12,21 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.compose']
 class Authorizer:
     """Class for authorizing the app to use Gmail API"""
 
-    def __init__(self, request=Request, credentials=Credentials, flow=InstalledAppFlow):
+    def __init__(
+        self, request=Request,
+        credentials=Credentials,
+        flow=InstalledAppFlow,
+        token_path='token.json'
+    ):
         """Initialize the Authorizer class
 
         Args:
             request (Request): A request object for the Google API
             credentials (Credentials): A credentials object for the Google API
             flow (InstalledAppFlow): A flow object for the Google API
+            token_path (str): The path to the token file
         """
+        self._token_path = token_path
         self._loaded_creds = None
         self._request = request
         self._credentials = credentials
@@ -35,7 +42,7 @@ class Authorizer:
 
     def _load_creds(self):
         self._loaded_creds = self._credentials.from_authorized_user_file(
-            'token.json', SCOPES)
+            self._token_path, SCOPES)
 
     def _get_new_creds(self):
         flow = self._flow.from_client_secrets_file(
@@ -43,33 +50,30 @@ class Authorizer:
         self._loaded_creds = flow.run_local_server(port=0)
 
     def _save_creds(self):
-        with open('token.json', 'w', encoding="utf-8") as token:
+        with open(self._token_path, 'w', encoding="utf-8") as token:
             token.write(self._loaded_creds.to_json())
 
     def login(self):
         """Logs in the user to the GmailAPI"""
 
-        try:
-            if not self._loaded_creds and os.path.exists('token.json'):
-                self._load_creds()
-            if not self.is_authorized():
-                if self._loaded_creds\
-                        and self._loaded_creds.expired\
-                        and self._loaded_creds.refresh_token:
-                    self._loaded_creds.refresh(self._request())
-                else:
-                    self._get_new_creds()
-                self._save_creds()
-        except Exception:
-            self.logout()
+        if not self._loaded_creds and os.path.exists(self._token_path):
+            self._load_creds()
+        if not self.is_authorized():
+            if self._loaded_creds\
+                    and self._loaded_creds.expired\
+                    and self._loaded_creds.refresh_token:
+                self._loaded_creds.refresh(self._request())
+            else:
+                self._get_new_creds()
+            self._save_creds()
 
     def logout(self):
         """Logs out the user from the GmailAPI by removing
            the authorized token from program memory and from disk"""
 
         self._loaded_creds = None
-        if os.path.exists('token.json'):
-            os.remove('token.json')
+        if os.path.exists(self._token_path):
+            os.remove(self._token_path)
 
     def get_creds(self):
         """Returns the credentials of the user

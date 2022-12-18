@@ -10,7 +10,8 @@ from repositories.message_repository import MessageRepository, message_repositor
 class TestMessageRepository(unittest.TestCase):
     def setUp(self):
         dirname = os.path.dirname(__file__)
-        test_db_path = os.path.join(dirname, '..', '..', 'data', 'test.sqlite')
+        test_db_path = os.path.join(
+            dirname, '..', '..', '..', 'data', 'test.sqlite')
         self.connection = get_db_conn(test_db_path)
         initialize_db(self.connection)
         self.msg_repo = MessageRepository(self.connection)

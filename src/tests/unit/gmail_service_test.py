@@ -36,6 +36,13 @@ class TestGmailService(unittest.TestCase):
             body={'raw': self.body_encoded}
         )
 
+    def test_send_without_recipient(self):
+        creds = {'some': 'credentials'}
+        self.service.build(creds)
+
+        self.service.send('', 'subject', 'body')
+        self.service.get_service().users().messages().send.assert_not_called()
+
     def test_create_message(self):
         self.service._email = 'test@gmail.com'
         message = self.service._create_message(

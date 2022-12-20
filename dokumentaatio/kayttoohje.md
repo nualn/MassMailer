@@ -29,11 +29,18 @@ poetry run invoke start
 Sovelluksen käyttöliitymässä on Login-nappi, jota painamalla käyttäjä voi autentikoitua Gmail-tililleen. Riippuen siitä, onko sovelluksessa tallessa voimassaoleva Oauth-token, avataan selainikkuna, jossa käyttäjä voi kirjautua Gmail-tililleen tai sitten käyttäjä kirjataan suoraan sisään. Tämä toiminnallisuus vaatii sekä Googlen sovellus-id:n sisältävän *credentials.json*-tiedoston että sen, että käyttäjän sähköposti on lisätty Googlen Cloud Consoleen testaajien listalle.
 Linkit ohjeisiin Google Cloud projektin ja *credentials.json*:in luomiseen löytyvät tämän dokumentin [konfigurointi](#konfigurointi)-osiosta.
 
+## Viestipohjien määrittely
+
+Käyttöliittymän vasemmalla puolella on kolme kenttää. To-kenttään voi määrittää sähköpostin vastaanottajan, Subject-kenttään sähköpostin aiheen ja Body-kenttään viestin leipätekstin. Kuhunkin kenttään voi määritellä paikkoja muuttujille muodossa ```[key]```, missä key on käyttöliittymän keskellä olevan taulukon sarakkeen nimi.
+
+## Muuttujien määrittely
+
+Käyttöliittymän keskellä olevaan tauluun voi määrittää viestipohjaan sijoitettavia muuttujia. Muuttujan nimeä voi vaihtaa klikkaamalla oikealla hiirinäppäimellä sarakkeen otsikkoa ja valitsemassla vaihtoehdon *Rename Column*.
+Muuttujien arvoja voi määrittää kirjaamalla ne taulukon soluihin.
 
 ## Sähköpostien lähetys
 
-Painamalla ikkunan alareunassa olevaa "Send all"-nappia voi lähettää massasähköposteja. Tämä toiminnallisuus vaatii, että käyttäjä on kirjautunut sisään.
-
+Painamalla ikkunan alareunassa olevaa "Send all"-nappia voi lähettää massasähköposteja. Tämä toiminnallisuus vaatii, että käyttäjä on kirjautunut sisään. Jokaista taulukon arvoja sisältävää riviä kohden lähetetään sähköposti, jossa arvot on parsittu viestipohjassa niille määritellyille paikoille.
 
 ## Viestipohjien tallentaminen tietokantaan
 

@@ -19,4 +19,5 @@
 |13.12.22| 2 | DocString dokumentointia |
 |13.12.22| 2 | Käyttöohjeet, arkkitehtuuri, readme päivittäminen |
 |18.12.22| 2 | Testien kirjoitusta ja organisointia, UI:n DocString dokumentointia. |
-| **yht.** | **53** | 
+|20.12.22| 2 | Testaus dokumentti & pikkuviilausta |
+| **yht.** | **55** | 

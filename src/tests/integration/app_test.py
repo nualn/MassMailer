@@ -10,7 +10,7 @@ from repositories.message_repository import MessageRepository
 from utils.text_parser import parser
 
 
-class TestSendAll(unittest.TestCase):
+class TestAppIntegration(unittest.TestCase):
     def setUp(self):
         self.auth = Mock()
 

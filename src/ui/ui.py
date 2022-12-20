@@ -16,7 +16,6 @@ class UI:
         Args:
             root (Tk): The root Tk object
             app (App): The App object
-
         """
 
         self._root = root

@@ -3,7 +3,7 @@
 Lataa projektin viimeisimmän [releasen](https://github.com/nualn/ot-harjoitustyo/releases) lähdekoodi.
 
 ## Konfigurointi
-Jos haluaa lähettää sovelluksella sähköpostia, tulee siihen kirjautua Google-käyttäjällä. Sisäänkirjautumista varten tarvitset projektin juureen Google Cloud -projektin clientID:n sisältävän tiedoston nimellä *credentials.json*. Oman projektin voit luoda [näillä ohjeilla](https://developers.google.com/workspace/guides/create-project) ja clientID:n generointiin apua saa [täältä](https://developers.google.com/identity/protocols/oauth2/native-app#creatingcred). Voidaan myös puhua itse käyttämäni clientId:n jakamisesta sähköpostilla nuutti.nikkola@helsinki.fi tai Telegramilla @nuuttin.
+Jos haluaa lähettää sovelluksella sähköpostia, tulee siihen kirjautua Google-käyttäjällä. Sisäänkirjautumista varten tarvitset projektin juureen Google Cloud -projektin clientID:n sisältävän tiedoston nimellä *credentials.json*. Oman projektin voit luoda [näillä ohjeilla](https://developers.google.com/workspace/guides/create-project) ja clientID:n generointiin apua saa [täältä](https://developers.google.com/gmail/api/quickstart/python#set_up_your_environment). Voidaan myös puhua itse käyttämäni clientId:n jakamisesta sähköpostilla nuutti.nikkola@helsinki.fi tai Telegramilla @nuuttin.
 
 Viestipohjien tallennukseen käytettävän tietokannan nimeä voi halutessaan muuttaa tiedostossa src/config.py muokkaamalla muuttujaa DB_FILE_NAME.
 
@@ -26,7 +26,8 @@ poetry run invoke start
 
 ## Sisäänkirjautuminen
 
-Sovelluksen käyttöliitymässä on Login-nappi, jota painamalla käyttäjä voi autentikoitua Gmail-tililleen. Riippuen siitä, onko sovelluksessa tallessa voimassaoleva Oauth-token, avataan selainikkuna, jossa käyttäjä voi kirjautua Gmail-tililleen tai sitten käyttäjä kirjataan suoraan sisään. Tämä toiminnallisuus vaatii sekä Googlen sovellus-id:n sisältävän 'credentials.json' tiedoston että sen, että käyttäjän sähköposti on lisätty Googlen Cloud Consoleen testaajien listalle.
+Sovelluksen käyttöliitymässä on Login-nappi, jota painamalla käyttäjä voi autentikoitua Gmail-tililleen. Riippuen siitä, onko sovelluksessa tallessa voimassaoleva Oauth-token, avataan selainikkuna, jossa käyttäjä voi kirjautua Gmail-tililleen tai sitten käyttäjä kirjataan suoraan sisään. Tämä toiminnallisuus vaatii sekä Googlen sovellus-id:n sisältävän *credentials.json*-tiedoston että sen, että käyttäjän sähköposti on lisätty Googlen Cloud Consoleen testaajien listalle.
+Linkit ohjeisiin Google Cloud projektin ja *credentials.json*:in luomiseen löytyvät tämän dokumentin [konfigurointi](#konfigurointi)-osiosta.
 
 
 ## Sähköpostien lähetys

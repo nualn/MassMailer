@@ -18,8 +18,8 @@ Sovelluksessa on vain yksi käyttäjärooli.
 - Ohjelma tuottaa käyttäjäkohtaisia sähköposteja korvaamalla muuttujat vastaanottajakohtaisilla arvoilla.
 - Käyttäjä pystyy lähettämään sähköpostit vastaanottajille Gmail API:n kautta.
   - Käyttäjä voi antaa sovellukselle oikeuden lähettää sähköposteja OAuth2 protokollalla.
-- Käyttäjä pystyy lataamaan vastaanottaja-muuttuja-listoja .table-tiedostoina.
-- Käyttäjä pystyy tallentamaan vastaanottaja-muuttuja-listoja .table-tiedostoina.
+- Käyttäjä pystyy lataamaan muuttuja-taulukoita .table-tiedostoina.
+- Käyttäjä pystyy tallentamaan muuttuja-taulukoita .table-tiedostoina.
 - Käyttäjä pystyy tallentamaan ja lataamaan viestipohjia tietokannasta.
 
 ## Jatkokehitysideoita

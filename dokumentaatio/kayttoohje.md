@@ -1,7 +1,5 @@
 # Käyttöohje
 
-TODO: Lisää kuvankaappauksia
-
 Lataa projektin viimeisimmän [releasen](https://github.com/nualn/ot-harjoitustyo/releases) lähdekoodi.
 
 ## Konfigurointi

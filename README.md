@@ -1,62 +1,43 @@
-# MassMailer-sovellus
-Sovelluksen avulla on mahdollista kirjoittaa muuttujia sisältäviä sähköposteja, määrittää muuttujille vastaanottajakohtaisia arvoja, sekä lähettää määritellyt arvot omaavia sähköposteja.
+# MassMailer application
+The application allows you to write emails containing variables, assign values to the variables per recipient, and send emails with the specified values.
 
-## Dokumentaatio
-[Käyttöohje](./dokumentaatio/kayttoohje.md)
+## Application status
 
-[Vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
+The user can define variables in the application's table field. They can be placed in the "To", "Subject" and message fields by selecting the desired row in the table and pressing the Preview button. The placement of the items is defined by adding the column name to the text within the square brackets, e.g. *[variable]*. By pressing the "Send all" button, all messages are sent via GmailAPI. Logging in is required to send messages. To log in, you need a file with the Google Cloud project clientID in the project root named *credentials.json*. You can create your own project using [these instructions](https://developers.google.com/workspace/guides/create-project) and for help with generating the clientID, you can [here](https://developers.google.com/gmail/api/quickstart/python#set_up_your_environment).
 
-[Tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
-
-[Changelog](./dokumentaatio/changelog.md)
-
-[Arkkitehtuuri](./dokumentaatio/arkkitehtuuri.md)
-
-[Testausdokumentti](./dokumentaatio/testaus.md)
-
-## Github release
-
-[Viikko 5 release](https://github.com/nualn/ot-harjoitustyo/releases/tag/viikko5)
-
-[Viikko 6 release](https://github.com/nualn/ot-harjoitustyo/releases/tag/viikko6)
-
-## Sovelluksen tila
-
-Käyttäjä pystyy määrittämään muuttujia sovelluksen taulukkokenttään. Ne voi sijoittaa "To"-, "Subject" ja viestikentiin valitsemalla halutun rivin taulukosta ja painamalla Preview-nappia. Sijoitus kohdat määritellään lisäämällä tekstiin sarakkeen nimi hakasulkujen sisällä, esim *[muuttuja]*. Painamalla "Send all"-nappia kaikki viestit lähetetään GmailAPI:n kautta. Viestien lähettäminen vaatii sisäänkirjautumista. Sisäänkirjautumista varten tarvitset projektin juureen Google Cloud -projektin clientID:n sisältävän tiedoston nimellä *credentials.json*. Oman projektin voit luoda [näillä ohjeilla](https://developers.google.com/workspace/guides/create-project) ja clientID:n generointiin apua saa [täältä](https://developers.google.com/gmail/api/quickstart/python#set_up_your_environment). Voidaan myös puhua itse käyttämäni clientId:n jakamisesta sähköpostilla nuutti.nikkola@helsinki.fi tai Telegramilla @nuuttin.
-
-## Ohjelman asennus ja käynnistys
-1. Asenna riippuvuudet:
+## Installing and starting the program
+1. Install the dependencies:
 ```bash
 poetry install
 ```
 
-2. Suorita alustustoimenpiteet:
+2. Perform the initialization steps:
 
 ```bash
 poetry run invoke build
 ```
 
-3. Käynnistä sovellus:
+3. Run the application:
 ```bash
 poetry run invoke start
 ```
 
-## Testaus
-1. Aja testit
+## Testing
+1. Run the tests
 ```bash
 poetry run invoke test
 ```
 
-2. Generoi testikattavuusraportti
+2. Generate a test coverage report
 ```bash
 poetry run invoke coverage-report
 ```
-## Muut komennot
-1. Aja lintteri
+## Other commands
+1. Run lint
 ```bash
 poetry run invoke lint
 ```
-2. Autoformatoi koodi
+2. Autoformat the code
 ```bash
 poetry run invoke format
 ```
